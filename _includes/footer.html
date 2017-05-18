@@ -1,0 +1,48 @@
+<!--FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row about-category">
+      <div class="twelve columns">
+        <div class="about">
+          <h3>About</h3>
+          <div class="profile ">
+            <img src="{{ site.baseurl }}/assets/images/about.jpg" class="u-full-width "/>
+          </div>
+          <div class="about-title">
+            {{ site.your_name }}
+          </div>
+          <div class="about-desc">
+            {{ site.about_yourself }}
+          </div>
+           
+          <div class="about-social">
+            <ul>
+            {% if site.email_username %}
+              <li><a href="mailto:{{ site.email_username }}">Email</a></li>
+            {% endif %}
+              <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}">Live Feed</a></li>
+            {% if site.facebook_username %}
+              <li><a href="https://www.facebook.com/{{ site.facebook_username }}">Facebook</a></li>
+            {% endif %}
+            {% if site.twitter_username %}
+              <li><a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a></li>
+            {% endif %}
+            {% if site.github_username %}
+              <li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>
+            {% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="twelve columns">
+        <div class="copyright">
+          &copy; {{ site.time | date: '%Y' }} {{ site.copyright_name }}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--END FOOTER -->

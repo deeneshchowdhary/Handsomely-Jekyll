@@ -1,0 +1,31 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <div class="site-branding">
+          <div class="site-title">
+            <a href="{{ site.baseurl }}/"><h1>{{ site.title }}</h1></a>
+          </div>
+          <div class="site-description">
+            <p>{{ site.site-description }}</p>
+          </div>
+        </div>
+        <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href="{{ site.baseurl }}/">Home</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="{{ site.baseurl }}/">Writing</a></li>
+          {% for page in site.pages %}{% if page.title %}
+		  {% if page.url != '/404.html' %}
+          <li class="navbar-item">
+              <a class="navbar-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          </li>
+          {% endif %}
+          {% endif %}{% endfor %}
+        </ul>
+      </div>
+    </nav>
+      </div>
+    </div>
+  </div>
+</header>
