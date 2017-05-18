@@ -9,7 +9,7 @@ description: "small description about you will take you long"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 email_username: your-email@domain.com #Your email address
-twitter_username: your_username #Twitter Username goes here
+twitter_username:  #Twitter Username goes here
 github_username:  deeneshchowdhary #Github Username goes here
 facebook_username: your_username #Facebook Username goes here
 your_name: Handsomely Pencil #Your Name for About
