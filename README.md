@@ -1,8 +1,10 @@
-#Handsomely Theme by Deenesh Chowdhary - Jekyll Version
+# Handsomely Theme by Deenesh Chowdhary - Jekyll Version
 
-##[view Live Demo &rarr;] (https://deeneshchowdhary.github.io/handsomely/)
+# Live Demo &rarr; (https://deeneshchowdhary.github.io/handsomely/)
 
-##Before you Being
+![Handsomely theme preview](/screenshot.png)
+
+# Before you Being
 
 In the _config.yml file, please edit necessary fields to reflect your handome website.
 
@@ -16,6 +18,10 @@ A full Jekyll environment is included with this theme. If you have Jekyll instal
 4) Lightweight and Clean Design
 
 ## Support
-Vist my personal website at http://deeneshchowdhary.com and feel free to send comment or feedback @deenesh.cdy@gmail.com, or open an issue here on GitHub for support.
+Vist my personal website at http://deeneshchowdhary.com and feel free to comment and send feedback.
+
+## License
+
+The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
 Thank you for using Handsomely Theme!
