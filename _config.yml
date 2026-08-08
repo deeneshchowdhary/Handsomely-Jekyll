@@ -2,23 +2,32 @@
 #CMS - Jekyll
 #Developer- Deenesh Chowdhary
 #http://deeneshchowdhary.com
-title: Handsomely 
-site-description: for handsome Typography 
+
+title: Handsomely
+description: "A polished, editorial-style Jekyll theme for thoughtful writing."
 email: your-email@domain.com
-description: "small description about you will take you long"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 email_username: your-email@domain.com #Your email address
-twitter_username:  #Twitter Username goes here
-github_username:  deeneshchowdhary #Github Username goes here
-facebook_username: your_username #Facebook Username goes here
+twitter_username: "" #Twitter Username goes here
+github_username: deeneshchowdhary #Github Username goes here
+facebook_username: "" #Facebook Username goes here
 your_name: Handsomely Pencil #Your Name for About
-about_yourself: "Duis interdum tincidunt risus. Integer a pellentesque nulla, ut tempus nunc. Mauris sed tortor vitae leo ullamcorper suscipit. Donec dignissim sollicitudin rutrum. Nam eleifend fermentum neque, a dictum velit. Nullam malesuada, nulla a dapibus efficitur, metus tortor sodales dui, eu luctus urna eros nec ipsum. Suspendisse id neque tristique, efficitur orci ut, blandit libero. Curabitur pellentesque condimentum ipsum, sed fermentum diam dictum ac. Curabitur eu aliquam neque, eu vulputate ipsum. Aliquam erat volutpat. " # Brief description about yourself
-copyright_name: Handsomely #Copyright 
+about_yourself: "A refined, responsive Jekyll theme with a clean editorial layout, thoughtful typography, and modern styling for personal blogs and portfolios." # Brief description about yourself
+copyright_name: Handsomely #Copyright
+
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 paginate: 5 #Total Number of Post in each Page
-gems: [jekyll-paginate, jekyll-feed]
+paginate_path: /page:num/
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock

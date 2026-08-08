@@ -1,26 +1,42 @@
 ---
-layout: page
+layout: default
 ---
+{% assign words = content | number_of_words %}
+{% assign minutes = words | divided_by: 200 %}
+{% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
+<article class="article-shell">
+  <header class="article-header">
+    <p class="eyebrow">Journal entry</p>
+    <h1 class="article-title">{{ page.title }}</h1>
+    <div class="article-meta">
+      <span>By {{ page.author | default: site.title }}</span>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      <span>{{ minutes }} min read</span>
+    </div>
+  </header>
 
-<div class="post-preview">
-            <header class="post-header">
-              <div class="post-title">
-                 {{ page.title }}
-              </div>
-              <div class="post-subtitle">
-                Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}
-              </div>
-            </header>
-            <article class="post-article">
-             {{ content }} 
-            </article>
-</div>
-<hr> 
-<div class="pager">
-    {% if page.previous.url %}
-    <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" class="button u-pull-left" title="{{page.previous.title}}">&larr; Previous</a>
-    {% endif %}
-    {% if page.next.url %}
-    <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" class="button u-pull-right" title="{{page.next.title}}">Next &rarr;</a>
-    {% endif %}
-</div>
+  {% if page.feature %}
+  <figure class="article-cover">
+    <img src="{{ '/assets/images/' | append: page.feature | relative_url }}" alt="{{ page.title }}" />
+  </figure>
+  {% endif %}
+
+  <div class="post-article">{{ content }}</div>
+
+  <footer class="article-footer">
+    <nav class="pager" aria-label="Adjacent posts">
+      <span>{% if page.previous.url %}<a class="button" href="{{ page.previous.url | relative_url }}">← {{ page.previous.title | truncatewords: 4 }}</a>{% endif %}</span>
+      <span>{% if page.next.url %}<a class="button" href="{{ page.next.url | relative_url }}">{{ page.next.title | truncatewords: 4 }} →</a>{% endif %}</span>
+    </nav>
+  </footer>
+
+  {% assign related = site.related_posts | where_exp: "post", "post.url != page.url" %}
+  {% if related.size > 0 %}
+  <aside class="container related-posts" aria-labelledby="related-title">
+    <div class="section-heading"><div><p class="eyebrow">Keep reading</p><h2 id="related-title">Related stories</h2></div></div>
+    <div class="post-grid">
+      {% for post in related limit: 2 %}{% include post-card.html post=post %}{% endfor %}
+    </div>
+  </aside>
+  {% endif %}
+</article>

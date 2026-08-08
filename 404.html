@@ -1,11 +1,13 @@
 ---
 layout: page
-title: 404
-description: "404 Error"
+title: Page not found
+description: "The page you’re looking for may have moved, or never existed."
+eyebrow: Lost in the margins
+permalink: /404.html
 ---
-
-<h2>SORRY</h2>
-<p>
-    Looks like something is went wrong on our end. <br>
-    Head back to <a href="{{ post.url | prepend: site.baseurl }}">Homepage</a>
-</p>
+<div class="error-card">
+  <p class="error-code">404</p>
+  <h2>Let’s get you back to the good stuff.</h2>
+  <p>The journal is still right where you left it.</p>
+  <a class="button button-primary" href="{{ '/' | relative_url }}">Return to the journal</a>
+</div>

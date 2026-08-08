@@ -1,122 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The page you’re looking for may have moved, or never existed." />
+  <meta name="theme-color" content="#31624b" />
+  <title>
+    Page not found - Handsomely
+  </title>
+  <link rel="alternate" type="application/atom+xml" title="Handsomely" href="/feed.xml" />
+  <link rel="stylesheet" href="/assets/css/normalize.css" />
+  <link rel="stylesheet" href="/assets/css/custom.css" />
+  <script>
+    (function () {
+      const saved = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      const theme = saved || (prefersDark ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Page not found | Handsomely</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Page not found" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The page you’re looking for may have moved, or never existed." />
+<meta name="twitter:description" property="og:description" content="The page you’re looking for may have moved, or never existed." />
+<link rel="canonical" href="/404.html" />
+<meta property="og:url" content="/404.html" />
+<meta property="og:site_name" content="Handsomely" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Page not found" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"The page you’re looking for may have moved, or never existed.","headline":"Page not found","url":"/404.html"}</script>
+<!-- End Jekyll SEO tag -->
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="small description about you will take you long">
-    <title>404 - Handsomely</title>
-    <link rel="stylesheet" href="/assets/css/normalize.css">
-    <link rel="stylesheet" href="/assets/css/skeleton.css">
-    <link rel="stylesheet" href="/assets/css/custom.css">
 </head>
 
 
-<body>
-
-    <header>
-  <div class="container">
-    <div class="row">
-      <div class="twelve columns">
-        <div class="site-branding">
-          <div class="site-title">
-            <a href="/"><h1>Handsomely</h1></a>
-          </div>
-          <div class="site-description">
-            <p>for handsome Typography</p>
-          </div>
-        </div>
-        <nav class="navbar">
-      <div class="container">
-        <ul class="navbar-list">
-          <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
-          
-		  
-          
-		  
-          <li class="navbar-item">
-              <a class="navbar-link" href="/contact.html">Contact</a>
-          </li>
-          
-          
-		  
-          <li class="navbar-item">
-              <a class="navbar-link" href="/typography.html">Typography</a>
-          </li>
-          
-          
-        </ul>
-      </div>
-    </nav>
+  <body class="layout-page">
+    <header class="site-header">
+  <div class="container header-inner">
+    <div class="site-branding">
+      <a class="brand-mark" href="/" aria-label="Handsomely home">H</a>
+      <div class="site-title">
+        <a href="/"><h1>Handsomely</h1></a>
+        <div class="site-description">Ideas, stories &amp; field notes</div>
       </div>
     </div>
+
+    <nav class="navbar" aria-label="Primary navigation">
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <ul class="navbar-list">
+        <li><a class="navbar-link" href="/">Journal</a></li>
+        <li><a class="navbar-link" href="/typography.html">Style guide</a></li>
+        <li><a class="navbar-link" href="/contact.html">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" type="button" aria-label="Switch color theme">☾</button>
+    </nav>
   </div>
 </header>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".theme-toggle");
+    if (!toggle) return;
+    const paint = () => toggle.textContent = document.documentElement.getAttribute("data-theme") === "dark" ? "☀" : "☾";
+    paint();
+    toggle.addEventListener("click", function () {
+      const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      paint();
+    });
+  });
+</script>
 
-    <!-- Main Content -->
-<section>
-<div class="container">
-	<div class="row">
-		<div class="twelve columns">
-			<h2>SORRY</h2>
-<p>
-    Looks like something is went wrong on our end. <br>
-    Head back to <a href="">Homepage</a>
-</p>
 
-		</div>
-	</div>
-</div>
-</section>
-
-    <!--FOOTER -->
-<footer>
+    <main class="site-main"><section class="page-shell">
   <div class="container">
-    <div class="row about-category">
-      <div class="twelve columns">
-        <div class="about">
-          <h3>About</h3>
-          <div class="profile ">
-            <img src="/assets/images/about.jpg" class="u-full-width "/>
-          </div>
-          <div class="about-title">
-            Handsomely Pencil
-          </div>
-          <div class="about-desc">
-            Duis interdum tincidunt risus. Integer a pellentesque nulla, ut tempus nunc. Mauris sed tortor vitae leo ullamcorper suscipit. Donec dignissim sollicitudin rutrum. Nam eleifend fermentum neque, a dictum velit. Nullam malesuada, nulla a dapibus efficitur, metus tortor sodales dui, eu luctus urna eros nec ipsum. Suspendisse id neque tristique, efficitur orci ut, blandit libero. Curabitur pellentesque condimentum ipsum, sed fermentum diam dictum ac. Curabitur eu aliquam neque, eu vulputate ipsum. Aliquam erat volutpat. 
-          </div>
-           
-          <div class="about-social">
-            <ul>
-            
-              <li><a href="mailto:your-email@domain.com">Email</a></li>
-            
-              <li><a href="/feed.xml">Live Feed</a></li>
-            
-              <li><a href="https://www.facebook.com/your_username">Facebook</a></li>
-            
-            
-            
-              <li><a href="https://github.com/deeneshchowdhary">GitHub</a></li>
-            
-            </ul>
-          </div>
+    
+    <header class="page-header">
+      <p class="eyebrow">Lost in the margins</p>
+      <h1 class="page-title">Page not found</h1>
+      <p class="page-description">The page you’re looking for may have moved, or never existed.</p>
+    </header>
+    
+    <div class="content-card"><div class="error-card">
+  <p class="error-code">404</p>
+  <h2>Let’s get you back to the good stuff.</h2>
+  <p>The journal is still right where you left it.</p>
+  <a class="button button-primary" href="/">Return to the journal</a>
+</div>
+</div>
+  </div>
+</section>
+</main>
+
+    <footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-about">
+        <div class="avatar-badge">HA</div>
+        <div>
+          <div class="about-title">Handsomely Pencil</div>
+          <div class="about-desc">A refined, responsive Jekyll theme with a clean editorial layout, thoughtful typography, and modern styling for personal blogs and portfolios.</div>
         </div>
       </div>
+      <nav class="about-social" aria-label="Social links">
+        <ul>
+          <li><a href="mailto:your-email@domain.com">Email</a></li>
+          <li><a href="/feed.xml">RSS</a></li>
+          <li><a href="https://twitter.com/" rel="me">Twitter</a></li>
+          <li><a href="https://github.com/deeneshchowdhary" rel="me">GitHub</a></li>
+        </ul>
+      </nav>
     </div>
-    <hr>
-    <div class="row">
-      <div class="twelve columns">
-        <div class="copyright">
-          &copy; 2021 Handsomely
-        </div>
-      </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Handsomely</span>
+      <span>Built thoughtfully with Jekyll.</span>
     </div>
   </div>
 </footer>
-<!--END FOOTER -->
-    
-</body>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menu = document.querySelector(".navbar-list");
+        const button = document.querySelector(".menu-toggle");
+        if (!menu || !button) return;
+        button.addEventListener("click", function () {
+          const open = menu.classList.toggle("is-open");
+          button.setAttribute("aria-expanded", open);
+        });
+      });
+    </script>
+  </body>
 </html>

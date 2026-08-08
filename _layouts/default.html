@@ -1,15 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  {% include head.html %}
 
-{% include head.html %}
-
-<body>
-
+  <body class="layout-{{ page.layout | default: 'default' }}">
     {% include nav.html %}
 
-    {{ content }}
+    <main class="site-main">{{ content }}</main>
 
     {% include footer.html %}
-    
-</body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menu = document.querySelector(".navbar-list");
+        const button = document.querySelector(".menu-toggle");
+        if (!menu || !button) return;
+        button.addEventListener("click", function () {
+          const open = menu.classList.toggle("is-open");
+          button.setAttribute("aria-expanded", open);
+        });
+      });
+    </script>
+  </body>
 </html>
