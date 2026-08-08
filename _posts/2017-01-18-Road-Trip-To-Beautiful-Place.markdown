@@ -12,7 +12,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam odio neque, maxim
 <p>
 Mauris enim lorem, pharetra in lorem eu, sollicitudin ultricies felis. Nulla facilisi. Vestibulum vitae consequat urna. Vestibulum pretium feugiat arcu, scelerisque imperdiet ligula condimentum eu. Suspendisse pharetra nunc eu posuere condimentum. Pellentesque interdum nisi eu rutrum commodo. Sed pellentesque congue eros, in consectetur libero tempus convallis. Integer tempor nulla volutpat volutpat blandit. Duis sed urna vehicula, hendrerit dolor at, vehicula neque. Praesent non scelerisque nisl, et elementum libero. Etiam libero dolor, malesuada quis magna vel, porttitor eleifend risus. 
 </p>
-<img src="{{ site.baseurl}}/assets/images/post-two.jpg" class="u-full-width" />
 <p>
 Duis interdum tincidunt risus. Integer a pellentesque nulla, ut tempus nunc. Mauris sed tortor vitae leo ullamcorper suscipit. Donec dignissim sollicitudin rutrum. Nam eleifend fermentum neque, a dictum velit. Nullam malesuada, nulla a dapibus efficitur, metus tortor sodales dui, eu luctus urna eros nec ipsum. Suspendisse id neque tristique, efficitur orci ut, blandit libero. Curabitur pellentesque condimentum ipsum, sed fermentum diam dictum ac. Curabitur eu aliquam neque, eu vulputate ipsum. Aliquam erat volutpat. 
 </p>

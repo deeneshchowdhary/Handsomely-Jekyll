@@ -1,36 +1,63 @@
 ---
 layout: page
 title: Contact
-description: "Contact"
+description: "A simple way to reach out for questions, collaboration, or a quick hello."
+eyebrow: Get in touch
 ---
 
-            <div class="contact">
-                <h2 class="contact-title">Contact</h2>
-                <p>This is a demo form. You can't send messages from this form. Please use Plugins provided by Jekyll. You can find list of application <a href="">here</a></p>
-                <form>
-                    <div class="row">
-                        <div class="six columns">
-                        <label for="exampleEmailInput">Your email</label>
-                        <input class="u-full-width" placeholder="your-beautiful@example.com" id="exampleEmailInput" type="email">
-                        </div>
-                        <div class="six columns">
-                        <label for="exampleRecipientInput">Reason for contacting</label>
-                        <select class="u-full-width" id="exampleRecipientInput">
-                            <option value="Option 1">Questions</option>
-                            <option value="Option 2">Admiration</option>
-                            <option value="Option 3">Can I get your number?</option>
-                        </select>
-                        </div>
-                    </div>
-                    <label for="exampleMessage">Message</label>
-                    <textarea class="u-full-width" placeholder="Hi Handsome …" id="exampleMessage"></textarea>
-                    <label class="example-send-yourself-copy">
-                        <input type="checkbox">
-                        <span class="label-body">Send a copy to yourself</span>
-                    </label>
-                    <input class="button-primary" value="Submit" type="submit">
-                    </form>
-            </div>
-        </div>
-    </div>
+<div class="contact-grid">
+  <div class="contact-card contact-intro">
+    <p class="eyebrow">Let’s talk</p>
+    <h3>Open to thoughtful conversations.</h3>
+    <p>
+      If you have a question, a project idea, or simply want to say hello, this
+      is the place to start.
+    </p>
+    <ul class="contact-list">
+      <li>
+        Email:
+        <a href="mailto:{{ site.email_username }}">{{ site.email_username }}</a>
+      </li>
+      <li>
+        GitHub:
+        <a href="https://github.com/{{ site.github_username }}"
+          >{{ site.github_username }}</a
+        >
+      </li>
+    </ul>
   </div>
+
+  <div class="contact-card">
+    <form class="modern-form" action="mailto:{{ site.email_username }}" method="post" enctype="text/plain">
+      <div class="form-grid">
+        <div>
+          <label for="email">Your email</label>
+          <input name="email"
+            placeholder="you@example.com"
+            id="email"
+            type="email"
+          />
+        </div>
+        <div>
+          <label for="reason">Reason</label>
+          <select name="reason" id="reason">
+            <option>Questions</option>
+            <option>Collaboration</option>
+            <option>Just saying hello</option>
+          </select>
+        </div>
+      </div>
+      <label for="message">Message</label>
+      <textarea
+        name="message"
+        placeholder="Tell me a little about your idea…"
+        id="message"
+      ></textarea>
+      <label class="checkbox-row">
+        <input name="copy" type="checkbox" />
+        <span>Send me a copy</span>
+      </label>
+      <input class="button button-primary" value="Send message" type="submit" />
+    </form>
+  </div>
+</div>

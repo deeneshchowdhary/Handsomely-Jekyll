@@ -1,27 +1,49 @@
-# Handsomely Theme by Deenesh Chowdhary - Jekyll Version
+# Handsomely Jekyll Theme
 
-## Live Demo &rarr; (https://deeneshchowdhary.github.io/handsomely/)
-
-![Handsomely theme preview](/screenshot.png)
-
-## Before you Being
-
-In the _config.yml file, please edit necessary fields to reflect your handome website.
-
-## What's Included
-A full Jekyll environment is included with this theme. If you have Jekyll installed, simply run 'jekyll serve --watch' in your command line and preview the build in your browser. You can use the same command to watch for changes in the source files as well.
+A polished, responsive Jekyll theme for personal blogs, portfolios, and editorial-style websites.
 
 ## Features
-1) Responsive Design (Skeleton) - Vist developer site here (http://getskeleton.com/)
-2) Typography - Google Font
-3) Pure HTML5 and CSS - No Javascript
-4) Lightweight and Clean Design
 
-## Support
-Vist my personal website at http://deeneshchowdhary.com and feel free to comment and send feedback.
+- Responsive layout for desktop and mobile
+- Three-column, fully clickable post-card grid
+- Editorial article layout with reading times and related posts
+- Automatic pagination, SEO metadata, RSS feed, and sitemap
+- Light/dark color themes with saved preference
+- Responsive mobile navigation and accessible landmarks
+- Easy customization through Jekyll config and theme templates
+
+## Getting Started
+
+1. Install Ruby and Bundler.
+2. Install dependencies:
+
+   ```bash
+   bundle install
+   ```
+
+3. Start the local preview server:
+
+   ```bash
+   bundle exec jekyll serve
+   ```
+
+4. Open your browser to `http://localhost:4000`.
+
+## Configuration
+
+Update the site settings in [\_config.yml](_config.yml) to match your name, description, social links, and site URL.
+
+## Project Structure
+
+- [\_includes/](_includes/) — reusable layout partials
+- [\_layouts/](_layouts/) — page and post templates
+- [\_posts/](_posts/) — blog posts
+- [assets/](/assets/) — stylesheets and images
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+This project is open source and available under the [MIT License](LICENSE).
 
-Thank you for using Handsomely Theme!
+## Support
+
+For questions or feedback, visit [Deenesh Chowdhary](https://deenesh.com).

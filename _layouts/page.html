@@ -1,14 +1,15 @@
 ---
 layout: default
 ---
-
-<!-- Main Content -->
-<section>
-<div class="container">
-	<div class="row">
-		<div class="twelve columns">
-			{{ content }}
-		</div>
-	</div>
-</div>
+<section class="page-shell">
+  <div class="container">
+    {% unless page.url == '/' %}
+    <header class="page-header">
+      <p class="eyebrow">{{ page.eyebrow | default: 'Handsomely' }}</p>
+      {% if page.title %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}
+      {% if page.description %}<p class="page-description">{{ page.description }}</p>{% endif %}
+    </header>
+    {% endunless %}
+    <div class="content-card">{{ content }}</div>
+  </div>
 </section>

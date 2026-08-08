@@ -1,0 +1,17 @@
+{% assign card_post = include.post %}
+<article class="post-card">
+  {% if card_post.feature %}
+  <div class="post-card-image">
+    <img src="{{ '/assets/images/' | append: card_post.feature | relative_url }}" alt="" loading="lazy" />
+  </div>
+  {% endif %}
+  <div class="post-card-body">
+    <div class="post-card-meta">
+      <time datetime="{{ card_post.date | date_to_xmlschema }}">{{ card_post.date | date: "%b %-d, %Y" }}</time>
+      <span>{% assign words = card_post.content | number_of_words %}{% assign minutes = words | divided_by: 200 %}{% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}{{ minutes }} min read</span>
+    </div>
+    <h3><a class="post-card-link" href="{{ card_post.url | relative_url }}">{{ card_post.title }}</a></h3>
+    <p>{{ card_post.subtitle | default: card_post.excerpt | strip_html | strip_newlines | truncatewords: 25 }}</p>
+    <div class="post-card-footer"><span>Read story</span><span aria-hidden="true">↗</span></div>
+  </div>
+</article>

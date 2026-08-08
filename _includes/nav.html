@@ -1,30 +1,36 @@
-<header>
-  <div class="container">
-    <div class="row">
-      <div class="twelve columns">
-        <div class="site-branding">
-          <div class="site-title">
-            <a href="{{ site.baseurl }}/"><h1>{{ site.title }}</h1></a>
-          </div>
-          <div class="site-description">
-            <p>{{ site.site-description }}</p>
-          </div>
-        </div>
-        <nav class="navbar">
-      <div class="container">
-        <ul class="navbar-list">
-          <li class="navbar-item"><a class="navbar-link" href="{{ site.baseurl }}/">Home</a></li>
-          {% for page in site.pages %}{% if page.title %}
-		  {% if page.url != '/404.html' %}
-          <li class="navbar-item">
-              <a class="navbar-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          </li>
-          {% endif %}
-          {% endif %}{% endfor %}
-        </ul>
-      </div>
-    </nav>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="site-branding">
+      <a class="brand-mark" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">H</a>
+      <div class="site-title">
+        <a href="{{ '/' | relative_url }}"><h1>{{ site.title }}</h1></a>
+        <div class="site-description">Ideas, stories &amp; field notes</div>
       </div>
     </div>
+
+    <nav class="navbar" aria-label="Primary navigation">
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <ul class="navbar-list">
+        <li><a class="navbar-link{% if page.url == '/' %} is-active{% endif %}" href="{{ '/' | relative_url }}">Journal</a></li>
+        <li><a class="navbar-link{% if page.url == '/typography.html' %} is-active{% endif %}" href="{{ '/typography.html' | relative_url }}">Style guide</a></li>
+        <li><a class="navbar-link{% if page.url == '/contact.html' %} is-active{% endif %}" href="{{ '/contact.html' | relative_url }}">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" type="button" aria-label="Switch color theme">☾</button>
+    </nav>
   </div>
 </header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".theme-toggle");
+    if (!toggle) return;
+    const paint = () => toggle.textContent = document.documentElement.getAttribute("data-theme") === "dark" ? "☀" : "☾";
+    paint();
+    toggle.addEventListener("click", function () {
+      const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      paint();
+    });
+  });
+</script>
